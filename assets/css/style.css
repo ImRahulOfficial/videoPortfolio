@@ -357,10 +357,10 @@ body.active {
 \*-----------------------------------*/
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 94% !important;
   padding-block: 18px;
   transition: var(--transition-2);
   z-index: 4;
@@ -1021,27 +1021,7 @@ body.active {
 /**
  * responsive for large than 575px screen
  */
-/* @media (max-width: 712px) {
-  .h5.hero-title_4 {
-    position: absolute;
-    top: 28%;
-    right: 17%;
-  }
-}
 
-@media (max-width: 588px) {
-  .h5.hero-title_4 {
-    display: block !important;
-    margin-top: 10rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .h5.hero-title_4 {
-    display: block !important;
-    margin-top: 10rem;
-  }
-} */
 @media (min-width: 575px) {
   /**
    * CUSTOM PROPERTY
@@ -1165,10 +1145,10 @@ body.active {
   }
 }
 
+
 /**
  * responsive for large than 768px screen
  */
-
 @media (min-width: 768px) {
   /**
    * CUSTOM PROPERTY
@@ -1214,9 +1194,29 @@ body.active {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 500px) {
   .hero {
     padding-top: 25rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -613px;
+    background-color: var(--eerie-black);
+    height: 80vh;
+    max-width: 280px;
+    width: 100%;
+    padding: 25px;
+    overflow-y: auto;
+    z-index: 2;
+    transition: 0.25s var(--cubic-out);
+    visibility: hidden;
+  }
+  .navbar.active {
+    visibility: visible;
+    transform: translateX(-585px);
+    transition-duration: 0.5s;
   }
 }
 
@@ -1617,13 +1617,13 @@ body.active {
   .hero-title_2 {
     margin-top: -0.5rem; /* Adjust as needed */
   }
-  
+
   .hero-title_4 {
     font-weight: 600;
     display: inline;
     margin-left: 0.5rem; /* Adjust as needed */
   }
-  
+
   .hero-text {
     margin-top: 1rem; /* Adjust as needed */
     --fs-10: 2rem;
@@ -1639,8 +1639,6 @@ body.active {
   .hero .wrapper .strong {
     left: 40%;
   }
-
-
 
   .hero-banner {
     max-width: 290px;
@@ -1847,7 +1845,7 @@ body.active {
   }
 
   .h5.hero-title_4 {
-   padding-right: 35rem;
+    padding-right: 35rem;
   }
 
   .hero-banner {
