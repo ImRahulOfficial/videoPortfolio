@@ -1196,9 +1196,6 @@ body.active {
 }
 
 @media (max-width: 500px) {
-  body{
-    overflow: hidden !important;
-  }
   .hero {
     padding-top: 25rem;
   }
